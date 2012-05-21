@@ -7,6 +7,9 @@
     <owners>@project.company@</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>@project.description@</description>
+	<tags>automatic class tester unittest unittests unit test helper nunit</tags>
+	<cpyright>Copyright theJoyOfCode.com 2012</copyright>
+	<projectUrl>https://github.com/joaofx/classtester</projectUrl>
   </metadata>
 	<files>
 		<file src="@release.dir@\*.*" target="lib" />
