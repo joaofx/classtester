@@ -1,0 +1,7 @@
+_Resharper*
+*.user
+*.suo
+obj
+bin
+/build
+lib

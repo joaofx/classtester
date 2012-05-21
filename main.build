@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project default="quick" xmlns="http://nant.sourceforge.net/release/0.91/nant.xsd">
+
+    <include buildfile="tools\build\common.build" />
+    
+	<property name="project.name" value="ClassTester" />
+	<property name="project.company" value="theJoyOfCode.com" />
+	<property name="project.description" value="A library to help test classes properties and constructors" />
+	<property name="project.id" value="ClassTester" />
+
+	<property name="project.is.lib" value="true" />
+	
+	<fileset basedir="${binary.dir}" id="project.solutions">
+		<include name="${source.dir}\QualityTools.sln" />
+	</fileset>
+	
+	<fileset id="test.files">
+		<include name="${binary.dir}\TheJoyOfCode.QualityTools.Tests.dll" />
+	</fileset>
+	
+	<fileset basedir="${binary.dir}" id="release.files">
+		<include name="TheJoyOfCode.QualityTools.dll" />
+		<include name="TheJoyOfCode.QualityTools.pdb" />
+		<include name="TheJoyOfCode.QualityTools.xml" />
+	</fileset>
+	
+	<fileset id="project.binary.files">
+		<include name="${binary.dir}\TheJoyOfCode.QualityTools.dll" />
+	</fileset>
+
+	<property name="project.nuspec" value="${script.dir}\TheJoyOfCode.QualityTools.nuspec" />
+	
+	<target name="package.before" />
+
+</project>
